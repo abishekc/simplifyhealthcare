@@ -102,7 +102,45 @@ p {
 }
 
 .card {
-	width: 200px;
-	float: left;
-	margin-right: 20px;
+	box-shadow: 0px 1px 3px #e2e2e2;
+	margin-bottom: 20px;
+
+}
+
+h5 {
+	font-family: "Poppins"
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.plans {
+	padding-top: 30px;
+}
+
+.sidebar{
+	background-color: #EAEFFA;
+	heigh: 100vh;
+}
+
+.value {
+	text-align: right;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #FF3267;
+	padding-top: 25px;
+	padding-right: 35px;
+}
+
+.value span{
+	font-weight: 400;
+	font-size: 18px;
+	color: #333333;
+}
+
+.information-card {
+	margin-top: 30px;
+	height: 300px;
+	box-shadow: 0px 2px 8px #e2e2e2;
+	border-radius: 2px;
 }

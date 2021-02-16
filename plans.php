@@ -13,13 +13,36 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			<div id="card-container" class="row card-container">
-				<div class="col-md-12">
-					<div class="card">
-						hello
-					</div>
-					<div class="card">
-						hello
+			<div class="row nav">
+				<div class="col-md-3 no-padding logo">
+					simplify healthcare.
+				</div>
+				<div class="col-md-6"></div>
+				<div class="col-md-1 no-padding value">
+					location<br>
+					<span id="location">location</span>
+				</div>
+				<div class="col-md-1 no-padding value">
+					age<br>
+					<span id="age">age</span>
+				</div>
+				<div class="col-md-1 no-padding value">
+					income<br>
+					<span id="income">income</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 sidebar">
+					
+				</div>
+				<div class="col-md-10">
+					<div class="container-fluid plans">
+						<div class="row" style="padding-left: 12px; margin-bottom: 20px;">
+							<span style="font-size: 18px; font-weight: 600; color: #333333; padding: 0px;">ALL PLANS</span>
+							Plans that match your specific criteria.
+						</div>
+						<div id="card-container" class="row card-container">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -39,9 +62,13 @@
 			}
 
 			console.log(findGetParameter("zipcode"));
+			document.getElementById("location").innerText = findGetParameter("zipcode");
+			document.getElementById("age").innerText = findGetParameter("age");
+			document.getElementById("income").innerText = findGetParameter("income");
 		</script>
 
 		<script>
+			var fullCounties;
 			 let requestURLOne = "https://marketplace.api.healthcare.gov/api/v1/counties/by/zip/"
 			 let requestURLTwo = findGetParameter("zipcode");
 			 let requestURLThree = "?apikey=d687412e7b53146b2631dc01974ad0a4";
@@ -55,18 +82,21 @@
 			 	const values = request.response;
 			 	console.log(values);
 			 	console.log(values.counties[0].fips);
-			 	findHealthPlans(values.counties);
+			 	var currOffset = 0;
+			 	fullCounties = values.counties;
+			 	findHealthPlans(values.counties, currOffset);
 			 }
 		</script>
 
 		<script type="text/javascript">
-
 			let cardContainer;
 
 			let createTaskCard = (task) => {
+				let col = document.createElement('div');
+				col.className = 'col-md-2';
 
 			    let card = document.createElement('div');
-			    card.className = 'card shadow cursor-pointer';
+			    card.className = 'card cursor-pointer';
 
 			    let cardBody = document.createElement('div');
 			    cardBody.className = 'card-body';
@@ -76,26 +106,26 @@
 			    title.className = 'card-title';
 
 			    let color = document.createElement('div');
-			    color.innerText = task.premium;
+			    let premHeading = "Premium: $";
+			    color.innerText = premHeading.concat(task.premium);
 			    color.className = 'card-color';
 
+			    let deductible = document.createElement('div');
+			    let dedHeading = "Deductible: $";
+			    deductible.innerText = dedHeading.concat(task.deductibles[0].amount);
 
+			    
 			    cardBody.appendChild(title);
 			    cardBody.appendChild(color);
+			    cardBody.appendChild(deductible);
 			    card.appendChild(cardBody);
-			    cardContainer.appendChild(card);
-
+			    col.appendChild(card);
+			    cardContainer.appendChild(col);
 			}
-
-			let initListOfTasks = () => {
-			    
-			};
-
-			initListOfTasks();
 		</script>
 
 		<script>
-			function findHealthPlans(geography) {
+			function findHealthPlans(geography, offset_val) {
 				 let requestURL = "https://marketplace.api.healthcare.gov/api/v1/plans/search?apikey=d687412e7b53146b2631dc01974ad0a4";
 				 let request = new XMLHttpRequest();
 				 request.open('POST', requestURL);
@@ -119,7 +149,7 @@
 					      zipcode: geography[0].zipcode
 					    },
 					    limit: 10,
-					    offset: 0,
+					    offset: offset_val,
 					    order: "asc"
 					}));
 				 request.onload = function() {
@@ -127,15 +157,18 @@
 				 	console.log(values);
 				 	console.log(values.plans[0].name);
 
-				 	if (cardContainer) {
-				        document.getElementById('card-container').replaceWith(cardContainer);
-				        return;
-				    }
-
 				    cardContainer = document.getElementById('card-container');
 				    values.plans.forEach((task) => {
 				        createTaskCard(task);
 				    });
+				    console.log(values.total);
+				    var tot = values.total;
+				    console.log(offset_val);
+				    if(offset_val < (tot - 10)) {
+				    	console.log("here");
+				 		findHealthPlans(fullCounties, offset_val + 10);
+				 		tot = tot - 10;
+			 		}
 				 }
 			}
 		</script>
