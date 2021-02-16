@@ -34,8 +34,8 @@
 				</div>
 				<div class="col-md-3 no-padding init-form">
 					<p>
+						version a0.1 <br>
 						Fill in the following information below to get tailored plans for you:
-						version a0.1
 					</p><br>
 					<form action="/plans.php" method="get">
 					  <input type="text" id="zipcode" name="zipcode" placeholder="zipcode">
@@ -49,8 +49,8 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 information-card">
-					<br><br>
+				<div class="col-md-12 information-card" style="text-align: center;">
+					<br><br><br><br><br>
 					information card
 				</div>
 			</div>
