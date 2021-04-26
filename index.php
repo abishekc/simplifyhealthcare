@@ -7,7 +7,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,900;1,700&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
@@ -25,7 +25,7 @@
 				<div class="col-md-9 no-padding main">
 					<h1 class="tagline">MAKE HEALTHCARE<br>
 					A PRIORITY TODAY.</h1><br>
-					version a0.1<br>
+					version a0.7<br>
 					Versioning text and onboarding material will be presented here.<br><br>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique ipsum<br> quis fermentum dapibus. Sed vel neque
 					vel sem tincidunt porttitor. Ut elementum enim arcu, vitae hendrerit mi auctor et. Pellentesque gravida velit et lectus placerat faucibus.<br> 
@@ -34,7 +34,7 @@
 				</div>
 				<div class="col-md-3 no-padding init-form">
 					<p>
-						version a0.1 <br>
+						version a0.7 <br>
 						Fill in the following information below to get tailored plans for you:
 					</p><br>
 					<form action="/plans.php" method="get">
@@ -49,9 +49,11 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 information-card" style="text-align: center;">
-					<br><br><br><br><br>
-					information card
+				<div class="card-columns">
+					<div class="col-md-12 information-card" style="text-align: center;">
+						<br><br><br><br><br>
+						information card
+					</div>
 				</div>
 			</div>
 		</div>
