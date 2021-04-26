@@ -105,9 +105,6 @@ function sendPlanRequest(geography, offset) {
 
 let cardContainer;
 let createTaskCard = (task) => {
-	let col = document.createElement('div');
-	col.className = 'col-md-2';
-
 	let card = document.createElement('div');
 	card.className = 'card cursor-pointer';
 
@@ -133,7 +130,15 @@ let createTaskCard = (task) => {
     ded_title.className = 'inner_heading';
     deductible.className = 'amount';
 
+
+
     cardBody.appendChild(title);
+
+    if (task.hsa_eligible == true) {
+    	let hsa_title = document.createElement('h5');
+    	hsa_title.innerText = "HSA PLAN";
+    	cardBody.appendChild(hsa_title);
+    }
 
     cardBody.appendChild(prem_title);
     cardBody.appendChild(premium);
@@ -142,17 +147,30 @@ let createTaskCard = (task) => {
     cardBody.appendChild(deductible);
 
     card.appendChild(cardBody);
-    col.appendChild(card);
-    cardContainer.appendChild(col);
+    cardContainer.appendChild(card);
 }
 
 
 async function loadCards() {
 	healthArray = await getHealthArray();
-	cardContainer = document.getElementById('card-container');
     healthArray.forEach((task) => {
+    	if (task.metal_level == "Bronze") {
+    		cardContainer = document.getElementById('bronze');
     		console.log("task");
     		createTaskCard(task);
+    	} else if (task.metal_level == "Silver") {
+    		cardContainer = document.getElementById('silver');
+    		console.log("task");
+    		createTaskCard(task);
+    	} else if (task.metal_level == "Gold") {
+    		cardContainer = document.getElementById('gold');
+    		console.log("task");
+    		createTaskCard(task);
+    	} else if (task.metal_level == "Platinum") {
+    		cardContainer = document.getElementById('platinum');
+    		console.log("task");
+    		createTaskCard(task);
+    	}
 	});
 }
 

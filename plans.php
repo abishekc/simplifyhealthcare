@@ -46,6 +46,18 @@
 							Plans that match your specific criteria.
 						</div>
 						<div id="card-container" class="row card-container">
+							<div id="bronze" class="col-md-3">
+								BRONZE
+							</div>
+							<div id="silver" class="col-md-3">
+								SILVER
+							</div>
+							<div id="gold" class="col-md-3">
+								GOLD
+							</div>
+							<div id="platinum" class="col-md-3">
+								PLATINUM
+							</div>
 						</div>
 					</div>
 				</div>

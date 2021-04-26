@@ -101,6 +101,15 @@ input[type=submit]:hover {
 	padding: 5px 10px 5px 10px;
 }
 
+#bronze .card {
+	background-color: #FFEEDB;
+}
+
+#silver .card {
+	background-color: #f9f9f9;
+}
+
+
 .inner_heading {
 	margin-top: 15px;
 }
@@ -144,8 +153,14 @@ h4 {
 
 h5 {
 	font-family: "CircularStd";
-	font-size: 14px;
+	font-size: 12px;
+	letter-spacing: 2px;
+	background-color: #FFB296;
+	width: auto;
+	margin: 0px;
+	padding: 10px 5px 7px 10px; 
 	font-weight: 700;
+	border-radius: 2px;
 }
 
 h6 {
