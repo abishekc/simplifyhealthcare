@@ -23,7 +23,7 @@
 		<div class="container">
 			<div class="row header">
 				<div class="col-md-12">
-					<h2>Health Plan Application</h2>
+					<h2>Health Plan Explorer</h2>
 					<p>Fill in the following information below to get tailored plans for you:</p>
 				</div>
 			</div>
