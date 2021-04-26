@@ -80,7 +80,7 @@ function sendPlanRequest(geography, offset) {
 					      people: [
 					        {
 					          age: parseInt(findGetParameter("age")),
-					          gender: "Female",
+					          gender: findGetParameter("gender"),
 					          utilization_level: "Low"
 					        }
 					      ]
@@ -114,22 +114,33 @@ let createTaskCard = (task) => {
 	let cardBody = document.createElement('div');
 	cardBody.className = 'card-body';
 
-	let title = document.createElement('h5');
+	let title = document.createElement('h4');
 	title.innerText = task.name;
 	title.className = 'card-title';
 
-	let color = document.createElement('div');
-	let premHeading = "Premium: $";
-    color.innerText = premHeading.concat(task.premium);
-    color.className = 'card-color';
+	let prem_title = document.createElement('h6');
+	prem_title.innerText = 'PREMIUM';
+	let premium = document.createElement('div');
+    premium.innerText = task.premium;
+    prem_title.className = 'inner_heading';
+    premium.className = 'amount';
 
+
+    let ded_title = document.createElement('h6');
+	ded_title.innerText = 'DEDUCTIBLE';
     let deductible = document.createElement('div');
-    let dedHeading = "Deductible: $";
-    deductible.innerText = dedHeading.concat(task.deductibles[0].amount);
+    deductible.innerText = (task.deductibles[0].amount);
+    ded_title.className = 'inner_heading';
+    deductible.className = 'amount';
 
     cardBody.appendChild(title);
-    cardBody.appendChild(color);
+
+    cardBody.appendChild(prem_title);
+    cardBody.appendChild(premium);
+
+    cardBody.appendChild(ded_title);
     cardBody.appendChild(deductible);
+
     card.appendChild(cardBody);
     col.appendChild(card);
     cardContainer.appendChild(col);

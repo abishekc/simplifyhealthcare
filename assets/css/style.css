@@ -13,53 +13,61 @@ html, body {
 	height: 100px;
 	line-height: 100px;
 	/*background-color: #EAEFFA;*/
-	background-color: #023C40;
+	background-color: #E5E9F0;
+	text-align: center;
 }
 
 .logo {
 	font-weight: 600;
-	color: #FF3267;
+	color: #0065FE;
 	height: parent;
-	padding-left: 35px;
 	/*border-right: 1.5px solid #D5DEF1;*/
-}
-
-.search {
-	font-weight: 400;
-	height: parent;
-	color: #AAAAAA;
-	text-align: right;
-	padding-right: 35px;
-}
-
-.banner {
-	border-bottom: 1.5px solid #f2f2f2;
 }
 
 .init-form {
 	padding: 45px 50px 45px 50px;
 }
 
+.header {
+	margin-top: 50px;
+	background-color: #E8F2FF;
+	padding: 25px 20px 25px 20px;
+	border-radius: 3px;
+	color: #465877;
+}
+
+.tasks {
+	font-family: "CircularStd";
+	font-size: 16px;
+	font-weight: 500;
+	color: #64738D;
+	line-height: 30px;
+	margin-top: 40px;
+}
+
+.main-app {
+	margin-top: 40px;
+	padding-left: 50px;
+}
+
 input[type=text] {
 	width: 100%;
 	background-color: white;
-	box-shadow: 0px 1px 3px #e2e2e2;
 	border: 0px;
+	border-bottom: 2px solid #e2e2e2;
 	outline: none;
-	padding: 20px 25px 20px 25px;
+	padding: 5px 25px 5px 0px;
 	color: #113082;
 	font-weight: 500;
 	font-size: 14px;
-	margin-bottom: 15px;
-	border-radius: 3px;
+	margin-bottom: 35px;
 	transition: box-shadow 0.5s ease;
 }
 
 input[type=text]:focus {
-	border: 0px;
+	border-bottom: 2px solid #0065FE;
 	outline: none;
-	box-shadow: 0px 2px 10px #e2e2e2;
-	transition: box-shadow 0.5s ease;
+	transition: border 0.5s ease;
 }
 
 input[type=submit] {
@@ -77,41 +85,75 @@ input[type=submit] {
 	letter-spacing: 1px;
 }
 
+input[type=radio] {
+
+}
+
 input[type=submit]:hover {
 	background-color: #333333;
 	transition: background-color 0.5s ease;
-}
-
-.main {
-	padding: 35px 50px 50px 35px;
-	border-right: 1.5px solid #f2f2f2;
-	border-radius: 2px;
-	background-color: #023C40;
-}
-
-.tagline {
-	font-family: "Playfair Display";
-	font-weight: 400;
-	font-size: 72px;
-	color: #FBBAB7;
-
-}
-
-p {
-	font-weight: 500;
-	color: #FF3267;
 }
 
 .card {
 	margin-bottom: 20px;
 	background-color: #E9F4F5;
 	border-style: none;
+	padding: 5px 10px 5px 10px;
+}
+
+.inner_heading {
+	margin-top: 15px;
+}
+
+.amount {
+	font-family: "Poppins";
+	font-weight: 500;
+	font-size: 16px;
+}
+
+hr {
+	padding: 0px;
+	border-radius: 5px;
+	border: 1.5px solid #e2e2e2;
+}
+p {
+	font-family: "CircularStd";
+	font-weight: 400;
+	margin: 0px;
+}
+
+h2 {
+	font-family: "CircularStd";
+	font-size: 24px;
+	font-weight: 900;
+}
+
+h3 {
+	font-family: "CircularStd";
+	font-size: 20px;
+	font-weight: 900;
+	color: #3E445A;
+}
+
+h4 {
+	font-family: "CircularStd";
+	font-size: 18px;
+	font-weight: 700;
+	color: #3E445A;
 }
 
 h5 {
-	font-family: "Poppins"
+	font-family: "CircularStd";
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 700;
+}
+
+h6 {
+	font-family: "CircularStd";
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 2px;
+	margin: 0px;
 }
 
 .plans {
@@ -140,8 +182,12 @@ h5 {
 }
 
 .information-card {
-	margin-top: 30px;
-	height: 300px;
-	box-shadow: 0px 2px 8px #e2e2e2;
-	border-radius: 2px;
+	margin: 30px 0px 30px 0px;
+	padding: 15px 20px 15px 20px;
+	height: auto;
+	box-shadow: 0px 1px 3px #e2e2e2;
+	border-radius: 5px;
+	font-family: "CircularStd";
+	font-weight: 900;
+	color: #333;
 }

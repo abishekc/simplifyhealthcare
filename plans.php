@@ -8,6 +8,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,900;1,700&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="./assets/fonts/fonts.css">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -44,9 +45,7 @@
 							<span style="font-size: 18px; font-weight: 600; color: #333333; padding: 0px;">ALL PLANS</span>
 							Plans that match your specific criteria.
 						</div>
-						<div class="row card-container">
-							<div id="card-container" class="card-columns">
-							</div>
+						<div id="card-container" class="row card-container">
 						</div>
 					</div>
 				</div>

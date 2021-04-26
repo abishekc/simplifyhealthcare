@@ -8,20 +8,72 @@
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,900;1,700&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="./assets/fonts/fonts.css">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<div class="container-fluid">
 			<div class="row nav">
-				<div class="col-md-3 no-padding logo">
+				<div class="col-md-12 logo">
 					simplify healthcare.
 				</div>
-				<div class="col-md-9 no-padding search">
-					
+			</div>
+		</div>
+		<div class="container">
+			<div class="row header">
+				<div class="col-md-12">
+					<h2>Health Plan Application</h2>
+					<p>Fill in the following information below to get tailored plans for you:</p>
 				</div>
 			</div>
-			<div class="row banner">
+
+			<div class="row whole">
+				<div class="col-md-2 tasks">
+					The Basics<br>
+					Utilization <br>
+					Budgetary Constraints
+				</div>
+				<div class="col-md-8 main-app">					
+					<h3>The Basics: Who Are you?</h3>
+					<p>If you'd like to just browse plans, you only need to fill out this section.</p><br>
+					<form action="/plans.php" method="get">
+						<h6>ZIPCODE</h6>
+					  	<input type="text" id="zipcode" name="zipcode" placeholder="777223">
+
+					  	<h6>AGE</h6>
+					 	<input type="text" id="age" name="age" placeholder="20">
+
+					  	<h6>YEARLY INCOME</h6>
+					  	<input type="text" id="income" name="income" placeholder="20,000">
+					  
+					  	<h6>BUDGET</h6>
+					  	<input type="text" id="income" name="budget" placeholder="300 / month">
+					  <input type="submit" value="SEARCH" style="font-weight: 600;">
+					  <input type="radio" name="gender" value="Male"><span class="radio-text">MALE</span>
+					  <input type="radio" name="gender" value="Female"><span class="radio-text">FEMALE</span>
+					</form>
+					<br><br><br><br>
+					<hr>
+
+					<h3>Utilization Information</h3>
+					<p>Providing information on how you plan to use medical services can give you a better estimate on costs.</p><br>
+
+					<h3>Budgetary Constraints</h3>
+					<p>We'll try our best to keep everything under budget.</p><br>
+				</div>
+				<div class="col-md-2">
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	</body>
+</html>
+
+
+
+<!--<div class="row banner">
 				<div class="col-md-9 no-padding main">
 					<h1 class="tagline">MAKE HEALTHCARE<br>
 					A PRIORITY TODAY.</h1><br>
@@ -45,19 +97,4 @@
 					  <input type="submit" value="SEARCH" style="font-weight: 600;">
 					</form>
 				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="card-columns">
-					<div class="col-md-12 information-card" style="text-align: center;">
-						<br><br><br><br><br>
-						information card
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-	</body>
-</html>
+			</div>-->
