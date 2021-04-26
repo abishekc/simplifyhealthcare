@@ -99,6 +99,7 @@ input[type=submit]:hover {
 	background-color: #E9F4F5;
 	border-style: none;
 	padding: 5px 10px 5px 10px;
+	border-radius: 5px;
 }
 
 #bronze .card {
@@ -118,6 +119,28 @@ input[type=submit]:hover {
 	font-family: "Poppins";
 	font-weight: 500;
 	font-size: 16px;
+}
+
+.benefits_link {
+	background-color: white;
+	border-radius: 3px;
+	margin-top: 20px;
+	font-family: "CircularStd";
+	font-weight: 700;
+	font-size: 14;
+	padding: 8px 10px 8px 10px;
+	text-decoration: none;
+	color: #333;
+}
+
+.sidebar_logo {
+	font-weight: 600;
+	color: #0065FE;
+	height: parent;
+	/*border-right: 1.5px solid #D5DEF1;*/
+	text-align: left;
+	margin-top: 35px;
+	padding-left: 20px;
 }
 
 hr {
@@ -171,21 +194,18 @@ h6 {
 	margin: 0px;
 }
 
-.plans {
-	padding-top: 30px;
-}
-
 .sidebar{
-	background-color: #023C40;
+	background-color: #E5E9F0;
 	heigh: 100vh;
 }
 
 .value {
-	text-align: right;
+	text-align: left;
 	line-height: 24px;
 	font-size: 16px;
 	font-weight: 600;
 	color: #FF3267;
+	padding-left: 20px;
 	padding-top: 25px;
 	padding-right: 35px;
 }
@@ -205,4 +225,8 @@ h6 {
 	font-family: "CircularStd";
 	font-weight: 900;
 	color: #333;
+}
+
+.card-columns {
+	column-count: 3 !important;
 }

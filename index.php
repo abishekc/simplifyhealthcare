@@ -30,13 +30,15 @@
 
 			<div class="row whole">
 				<div class="col-md-2 tasks">
-					The Basics<br>
-					Utilization <br>
-					Budgetary Constraints
+					<img src="./assets/images/create.png" width="18"/>&nbsp;&nbsp; The Basics<br>
+					<img src="./assets/images/use.png" width="18"/>&nbsp;&nbsp; Utilization <br>
+					<img src="./assets/images/tag.png" width="18"/>&nbsp;&nbsp; Budgetary Constraints
 				</div>
-				<div class="col-md-8 main-app">					
-					<h3>The Basics: Who Are you?</h3>
-					<p>If you'd like to just browse plans, you only need to fill out this section.</p><br>
+				<div class="col-md-8 main-app">
+					<div class="header" style="margin-top: 0px;">				
+						<h3>The Basics: Who Are you?</h3>
+						<p>If you'd like to just browse plans, you only need to fill out this section.</p>
+					</div><br>
 					<form action="/plans.php" method="get">
 						<h6>ZIPCODE</h6>
 					  	<input type="text" id="zipcode" name="zipcode" placeholder="777223">
@@ -53,16 +55,49 @@
 					  <input type="radio" name="gender" value="Male"><span class="radio-text">MALE</span>
 					  <input type="radio" name="gender" value="Female"><span class="radio-text">FEMALE</span>
 					</form>
+
 					<br><br><br><br>
-					<hr>
+					<div class="header" style="margin-top: 0px;">
+						<h3>Utilization Information</h3>
+						<p>Providing information on how you plan to use medical services can give you a better estimate on costs.</p>
+					</div><br>
+					<h6>HOW MANY TIMES A YEAR DO YOU SEE YOUR DOCTOR?</h6>
+					<input type="text" placeholder="2 / year">
+					
+					<h6>HOW MANY PRESCRIPTIONS DO YOU HAVE?</h6>
+					<input type="text" placeholder="3">
 
-					<h3>Utilization Information</h3>
-					<p>Providing information on how you plan to use medical services can give you a better estimate on costs.</p><br>
+					<h6>DO YOU WEAR GLASSES?</h6>
+					<input type="text" placeholder="yes">
 
-					<h3>Budgetary Constraints</h3>
-					<p>We'll try our best to keep everything under budget.</p><br>
+					<br><br><br>
+					<div class="header" style="margin-top: 0px;">
+						<h3>Budgetary Constraints</h3>
+						<p>We'll try our best to keep everything under budget.</p>
+					</div><br>
+					<h6>WHAT DO YOU SPEND ON HEALTHCARE NOW?</h6>
+					  	<input type="text" placeholder="$0">
+
+					  	<h6>MONTHLY BUDGET</h6>
+					 	<input type="text" placeholder="$215">
+					<br>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-2 tasks">
+					version a0.7<br><br>
+					md5 checksum:
+					46798b5cfca45c46a84b7419f8b74735<br><br>
+
+					last updated:<br> 04.12.21 at 10:19:34 AM<br><br>
+
+					last accessed:<br> 04.14.21 at 15:31:49 PM by abishekc / eshaanp
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row nav">
+				<div class="col-md-12 logo">  
+					copyright simplify healthcare. 2021.
 				</div>
 			</div>
 		</div>

@@ -15,48 +15,40 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			<div class="row nav">
-				<div class="col-md-3 no-padding logo">
-					simplify healthcare.
-				</div>
-				<div class="col-md-6"></div>
-				<div class="col-md-1 no-padding value">
-					location<br>
-					<span id="location">location</span>
-				</div>
-				<div class="col-md-1 no-padding value">
-					age<br>
-					<span id="age">age</span>
-				</div>
-				<div class="col-md-1 no-padding value">
-					income<br>
-					<span id="income">income</span>
-				</div>
-			</div>
-
-
 			<div class="row">
-				<!--<div class="col-md-2 sidebar">
-					
-				</div>-->
-				<div class="col-md-12">
+				<div class="col-md-2 sidebar">
+					<div class="sidebar_logo">
+						simplify healthcare.
+					</div>
+					<div class="value">
+						location<br>
+						<span id="location">location</span>
+					</div>
+					<div class="value">
+						age<br>
+						<span id="age">age</span>
+					</div>
+					<div class="value">
+						income<br>
+						<span id="income">income</span>
+					</div>
+				</div>
+
+
+				<div class="col-md-10">
+					<div class="header" style="margin-top: 20px; margin-left: 8px;">				
+						<h3>All Plans</h3>
+						<p>All plans that match your criteria are listed below.</p>
+					</div><br>
 					<div class="container-fluid plans">
 						<div class="row" style="padding-left: 12px; margin-bottom: 20px;">
-							<span style="font-size: 18px; font-weight: 600; color: #333333; padding: 0px;">ALL PLANS</span>
-							Plans that match your specific criteria.
 						</div>
 						<div id="card-container" class="row card-container">
-							<div id="bronze" class="col-md-3">
-								BRONZE
+							<div id="bronze" class="col-md-2">
 							</div>
-							<div id="silver" class="col-md-3">
-								SILVER
+							<div id="silver" class="col-md-6 card-columns">
 							</div>
-							<div id="gold" class="col-md-3">
-								GOLD
-							</div>
-							<div id="platinum" class="col-md-3">
-								PLATINUM
+							<div id="gold" class="col-md-2">
 							</div>
 						</div>
 					</div>

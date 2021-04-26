@@ -123,6 +123,14 @@ let createTaskCard = (task) => {
     premium.className = 'amount';
 
 
+    let break_el = document.createElement('br');
+
+	let link_title = document.createElement("a");
+    link_title.innerText = 'Full Benefits';
+    link_title.href = task.benefits_url;
+    link_title.className = "benefits_link";
+
+
     let ded_title = document.createElement('h6');
 	ded_title.innerText = 'DEDUCTIBLE';
     let deductible = document.createElement('div');
@@ -130,6 +138,8 @@ let createTaskCard = (task) => {
     ded_title.className = 'inner_heading';
     deductible.className = 'amount';
 
+
+    
 
 
     cardBody.appendChild(title);
@@ -145,6 +155,10 @@ let createTaskCard = (task) => {
 
     cardBody.appendChild(ded_title);
     cardBody.appendChild(deductible);
+
+    cardBody.appendChild(break_el);
+    cardBody.appendChild(link_title);
+
 
     card.appendChild(cardBody);
     cardContainer.appendChild(card);
