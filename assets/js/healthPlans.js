@@ -43,6 +43,7 @@ function sendGeographyRequest() {
 	return new Promise(function (resolve) {
 		let API_ZIP_URL = "/counties/by/zip/"
 		let zipcode = findGetParameter("zipcode");
+		/* move to credentials */
 		let apikey = "?apikey=d687412e7b53146b2631dc01974ad0a4";
 		let countyRequest = API_BASE_URL.concat(API_ZIP_URL, zipcode, apikey);
 
